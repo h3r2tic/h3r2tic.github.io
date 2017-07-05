@@ -9,22 +9,22 @@ The code described in this note doesn't really aim to be pragmatic. Treat it as 
 # Introduction
 Back in a previous life when I was a D programmer, I contributed to a project called [*D Dynamic Libraries*](http://www.dsource.org/projects/ddl). It was a pretty crazy system which on Windows provided means of loading plugins without the need for DLLs. *DDL* would load compiler-generated object files directly, and link them at runtime. For the D language it was a pretty major deal, as DLLs were severely broken at the time.
 
-When I recently overhead [@gwihlidal](https://twitter.com/gwihlidal) and [@repi](https://twitter.com/repi) discuss their annoyances with DLLs, I figured "hold my beer", and went on to re-implement an ad-hoc version of *D Dynamic Libraries* in C++.
+When I recently overheard [@gwihlidal](https://twitter.com/gwihlidal) and [@repi](https://twitter.com/repi) discuss their annoyances with DLLs, I figured "hold my beer", and went on to re-implement an ad-hoc version of *D Dynamic Libraries* in C++.
 
 What are the annoyances? Here's a couple:
 1. Duplication of symbols
 2. Windows locking the DLL files while they're loaded
 
-Item #1 can be a problem with anything using globals or singletons, such as RTTI systems, allocators, or logging systems. It also means potentially longer link times and plugins larger than they should be. This stems from globals being fully defined in both the host and plugins, rather than provided by just one (the host). I used to think this was a hard limitation of DLLs, in that they could not pull symbols from the host, but I was mistaken. One can use dllexport in the host, dllimport in the plugin, create an implib for the host, and provide it when linking the DLL. [Here's one example I found](https://github.com/mesonbuild/meson/issues/1623). When I tried it, the dllexport wasn't even needed for functions, only for variables. If you don't have full control over all code, it might be tricky to add dllimport to all the globals.
+Item #1 can be cause problems with anything using globals or singletons. This may include RTTI systems, allocators, logging systems, etc. It also means potentially longer link times and plugins larger than they should be. This annoyance from globals being fully defined in both the host and plugins, rather than provided by just one (the host). I used to think this was a hard limitation of DLLs, in that they could not pull symbols from the host, but I was mistaken. One can use dllexport in the host, dllimport in the plugin, create an implib for the host, and provide it when linking the DLL. [Here's one example I found](https://github.com/mesonbuild/meson/issues/1623). When I tried it, the dllexport wasn't actually *needed* for functions, but it was necessary for variables. If you don't have full control over all code, it might be tricky to add dllimport to all the globals.
 
 One might actually argue that #1 is a Good Thing as it enforces strict separation between the host and plugins, and results in cleaner architectures. But I'm not here to argue that (see disclaimer).
 
 {:.center}
 ![](forScience.jpg){:width="75%"}
 
-Item #2 is just annoying, and mostly pops up when rolling a code hot-swap system. It can be easily worked around, but if we reinvent the wheel, we don't need to work around it :P
+Item #2 mostly pops up when rolling a code hot-swap system. It can be easily worked around, but if we reinvent the wheel, we don't need to work around it :P
 
-# Running code from OBJ
+# Running code from object files
 
 Suppose we have a *test.cpp* file with a simple function like this:
 
@@ -88,46 +88,63 @@ The generated "call" location is relative to the next instruction, and by defaul
 
 ## Runtime linking
 
-In order to run this code we need to *resolve* all unreferenced symbols. We do this by *linking* the binary to our application at runtime.
+In order to run this code we need to *resolve* all unreferenced symbols. We do this by *linking* the loaded binary image to our application at runtime.
 
-Linking this sample isn't particularly complicated because the object file contains most of the information we need.
+An object file contains a number of sections, each potentially comprising data, executable code, debug symbols, or other information. Each section also contains a list of relocations. A relocation is a triple of:
 
-Each section contains a list of relocations. Each relocation is a triple of:
+* **Offset into the section** specifying a location where the relocation must be applied
+* **Index of the symbol** that the location must be adjusted to point at
+* **Type** of the relocation
 
-* Offset into the section
-* Index of the target symbol in the symbol table
-* Type of relocation
-
-In this case, the relocation type is a 32 bit offset relative to the next instruction. There are a few other relocation types, for example absolute 64 bit ones, but we only need to handle one type for this example.
+In our simple case, the relocation type is a 32 bit offset relative to the next instruction. There are a few other relocation types, for example absolute 64 bit ones, but we only need to handle one type for this example.
 
 ```cpp
+// Initialize DbgHelp so we can look-up symbols in the host.
+SymInitialize(GetCurrentProcess(), nullptr, TRUE);
+
 for (auto& rel : coff.getSectionRelocations(coff.sections[3])) {
 	CoffBinary::Symbol& sym = coff.symbols[rel.SymbolTableIndex];
 	char* relSource = nullptr;
 
 	if (CoffBinary::SymClassStatic == sym.StorageClass) {
-		// Reference to the static data segment in the OBJ
+		// Reference to a static data segment in the OBJ
 		relSource =
 			coff.rawData +
 			coff.sections[sym.SectionNumber - 1].PointerToRawData +
 			sym.Value;
 	} else if (CoffBinary::SymClassExternal == sym.StorageClass) {
 		// External reference. Use DbgHelp to find symbol in host app
-		SYMBOL_INFO symbol;
+		SYMBOL_INFO symbol = {};
 		symbol.SizeOfStruct = sizeof(SYMBOL_INFO);
-		symbol.MaxNameLen = 1;
 		std::string symName = coff.decodeString(sym.Name);
 		if (SymFromName(GetCurrentProcess(), symName.c_str(), &symbol)) {
 			relSource = (char*)symbol.Address;
 		}
 	}
 
-	int* relTarget = (int*)(coff.rawData +
-		coff.sections[3].PointerToRawData + rel.VirtualAddress);
-	*relTarget = relSource - (char*)relTarget - 4;
+	// Address that needs patching up
+	char* relTarget = coff.rawData +
+		coff.sections[3].PointerToRawData + rel.VirtualAddress;
+
+	// Write relative offset. Next instruction is 4 bytes after destination.
+	*(int*)relTarget = relSource - relTarget - 4;
 }
 ```
 Now when we run it, we get this:
 
 {:.center}
 ![](runobj5.png)
+
+This is a basic version of runtime linking which completely bypasses DLL files. At (Address TODO) you can find a slightly more complete implementation which resolves all sections. It uses a different COFF parser which I had borrowed from github before I wrote my own. It also parses the host's MAP file to extract information about symbol locations, as even DbgHelp fails to find them all.
+
+In practice one would also need to resolve multiple object files against each other, handle all relocation types, potentially create exception frames, and then some.
+
+I didn't get that far though.
+
+I got kinda stuck at trying to make Visual Studio's debugger load the debug info for the manually linked code. There are WinApi functions like [RtlAddFunctionTable](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680588(v=vs.85).aspx) and [SymAddSymbol](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680664(v=vs.85).aspx) which in theory can be used to feed extra symbols and debug info to DbgHelp and the CRT. It seems however that debuggers don't use whatever information the executable provides via those APIs, and have their own view of the debugee's symbols.
+
+If you know a trick to get debug symbols to work with manual code loading, and it doesn't involve writing a debug engine, I would be very curious to learn about it. In the meantime though...
+
+## Going back to DLLs
+
+At this stage I had a working COFF reader/writer, and I was ready to get nasty.

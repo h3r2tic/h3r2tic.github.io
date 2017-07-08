@@ -140,7 +140,7 @@ Now when we run our app, we get the following:
 {:.center}
 ![](runobj5.png)
 
-This is a basic version of runtime linking which completely bypasses DLL files. At (Repository address TODO) you can find a slightly more complete implementation which doesn't arbitrarily resolve only section three. It uses a different COFF parser which I had borrowed from github before I wrote my own. It also parses the host's MAP file to extract information about symbol locations, as even DbgHelp fails to find them all.
+This is a basic version of runtime linking which completely bypasses DLL files. In [my github repository](https://github.com/h3r2tic/runobj) you can find a slightly more complete implementation which doesn't arbitrarily resolve only section three. It uses a different [COFF parser](https://github.com/serge1/COFFI) which I had borrowed from Serge Lamikhov-Center before I wrote my own. The sample also reads the host's MAP file to extract information about symbol locations, as even DbgHelp fails to find them all.
 
 In practice one would also need to resolve multiple object files against each other, handle all relocation types, potentially create exception frames, and then some.
 
@@ -218,7 +218,7 @@ int main()
 {:.center}
 ![](relocdll1.png)
 
-You can grab an implementation of manual DLL relocation at (Address TODO). It still only uses just one OBJ file for the plugin, but the concept should scale to more complex cases. It's still far from tested, and I might be missing some important pieces of info which might invalidate this approach. Again, take it with a grain of salt.
+You can grab a basic implementation of manual DLL relocation in another [repository of mine](https://github.com/h3r2tic/relocdll). It still only uses just one OBJ file for the plugin, but the concept should scale to more complex cases. It's still far from tested, and I might be missing some important pieces of info which might invalidate this approach. Again, take it with a grain of salt.
 
 # 32-bit relative addresses
 

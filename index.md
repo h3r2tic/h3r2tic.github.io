@@ -13,7 +13,7 @@ nonsense:
       description: "Runtime loading of *object* files, relocation of DLLs. Mostly harmful stuff. [Article here](posts/how-not-to-use-dlls/)"
     - title: Stochastic Screen-Space Reflections
       vimeo: 115108688
-      description: "Importance sampled screen-space reflections with a fancy spatiotemporal filter. I prototyped it in a toy engine written in the Rust language, and later ported to Frostbite. It first shipped it Mirror's Edge and Need for Speed.<br/><br/>
+      description: "Importance sampled screen-space reflections with a novel spatiotemporal filter. I prototyped it in a toy engine written in the Rust language, and later ported to Frostbite. It first shipped it Mirror's Edge and Need for Speed.<br/><br/>
       Check out the slides for my Siggraph 2015 talk which was part of [Advances in Real-Time Rendering in Games](http://advances.realtimerendering.com/s2015/)."
     - title: Frostbite
       description: "I worked in the Frostbite Rendering team in Stockholm for three years. My focus was Image Quality, and included physically-based rendering, tiled lighting, screen-space and planar reflections, skin shading, high dynamic range stuff (grading, display mapping, vendor-specific output), physically-inspired glare, checkerboard rendering, temporal anti-aliasing, motion blur, global illumination, as well as low-level PS4 and XB1 work. I even had some fun with Mantle. My code ended up in franchises like Battlefield, Mass Effect, Battlefront, Need For Speed, FIFA, Mirror's Edge, Plants vs Zombies, and a few others."
@@ -35,21 +35,15 @@ nonsense:
       description: "An excursion into an unusual territory for me -- game networking and physics synchronization. I had the ambition of making a Battlefield-like game, but that turned out to be too vast in scope... Surprise, surprise! In any case, it was a valuable and fun learning experience. I used ENet for the low-level networking, rolled an authority scheme on top of it, and synchronized a Havok physics simulation as well as gameplay logic."
     - title: ctrace
       banner: ctrace.png
-      description: "Ok, this one is here just for the bragging rights. I claim to have written the world's first compile-time ray-tracer. That is, the compiler runs, and there's no executable generated. Instead, it prints garbage to *stdout*. Redirect it to a file, and you have an image. I did it in the **D language** before it even hit the 1.0 version, so it didn't have any of the fancy newfangled compile-time function evaluation."
+      description: "Ok, this one is here just for the bragging rights. I claim to have written the world's first compile-time ray-tracer. That is, the compiler runs, and there's no executable generated. Instead, it prints garbage to *stdout*. Redirect it to a file, and you have an image. I did it in the D language before it even hit the 1.0 version, so it didn't have any of the modern compile-time function evaluation."
 ---
 
-![avatar](avatar.jpg){:style="float: right; margin: 1em; width: 128px; box-shadow: 0 0 14px 2px rgba(0, 0, 0, 0.6)"}
+![avatar](avatar.jpg){:style="float: right; margin: 1em; width: 128px" class="softShadow"}
 
-Hello, world!
+# Hello, world!
 
 My name is Tomasz Stachowiak, and I'm a professional madman. I mostly tinker with real-time graphics. By day I'm a reputable software engineer at [SEED](https://www.ea.com/seed), while at night I bask in the suffering of compilers and GPUs. Here's some of my nonsense:
 
 {% for item in page.nonsense %}
 <h2 style="clear: left; padding-top: 1em">{{item.title}}</h2>
-{% if item.banner %}
-![banner]({{item.banner}}){:style="width: 320px; float: left; padding-right: 1em; padding-bottom: 1em"}
-{% else %}
-<iframe src="https://player.vimeo.com/video/{{item.vimeo}}?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="320" height="200" frameborder="0" style="float: left; padding-right: 1em; padding-bottom: 1em" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-{% endif %}
-{{item.description}}
-{% endfor %}
+{% if item.banner %}![banner]({{item.banner}}){:style="width: 320px; float: left; margin-right: 1em; margin-bottom: 1em" class="softShadow"}{% else %}<iframe src="https://player.vimeo.com/video/{{item.vimeo}}?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="320" height="200" frameborder="0" style="float: left; margin-right: 1em; margin-bottom: 1em" webkitallowfullscreen mozallowfullscreen allowfullscreen class="softShadow"></iframe>{% endif %}{{item.description}}{% endfor %}

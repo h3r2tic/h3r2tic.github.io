@@ -8,7 +8,7 @@ nonsense:
     - title: A deferred material rendering system
       description: "Practical application of the GCN hacks: indirect dispatch of lots of unique compute shaders and native barycentric coordinate access. Those allows for efficient surface shading in a deferred manner without the use of ubershaders. Geometry and material descriptions can be decoupled, and we gain a lot of control over shading frequency. [Slides here!](https://onedrive.live.com/view.aspx?cid=ebe7deda70d06da0&page=view&resid=EBE7DEDA70D06DA0!115&parId=EBE7DEDA70D06DA0!105&app=PowerPoint)"
       banner: deferredMaterialRenderingSystem.png
-    - title: How now to use DLLs
+    - title: How not to use DLLs
       banner: howNotToUseDlls.png
       description: "Runtime loading of *object* files, relocation of DLLs. Mostly harmful stuff. [Article here](posts/how-not-to-use-dlls/)"
     - title: Stochastic Screen-Space Reflections

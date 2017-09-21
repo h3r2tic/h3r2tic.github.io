@@ -6,7 +6,7 @@ nonsense:
       description: "AMD's Graphics Core Next GPU architecture has a number of interesting features which one cannot access via standard APIs. I show how to hack around the OpenGL driver, and feed it native shaders written in GCN ISA instead of GLSL. [Slides here!](https://onedrive.live.com/view.aspx?resid=EBE7DEDA70D06DA0!107&app=PowerPoint&authkey=!AD-O3oq3Ung7pzk)"
       banner: hackingGcnWithOpengl.png
     - title: A deferred material rendering system
-      description: "Practical application of the GCN hacks: indirect dispatch of lots of unique compute shaders and native barycentric coordinate access. Those allows for efficient surface shading in a deferred manner without the use of ubershaders. Geometry and material descriptions can be decoupled, and we gain a lot of control over shading frequency. [Slides here!](https://onedrive.live.com/view.aspx?cid=ebe7deda70d06da0&page=view&resid=EBE7DEDA70D06DA0!115&parId=EBE7DEDA70D06DA0!105&app=PowerPoint)"
+      description: "Practical application of the GCN hacks: indirect dispatch of lots of unique compute shaders and native barycentric coordinate access. Those allows for efficient surface shading in a deferred manner without the use of ubershaders. Geometry and material descriptions can be decoupled, and we gain a lot of control over shading frequency. [Slides here!](https://onedrive.live.com/view.aspx?resid=EBE7DEDA70D06DA0!115&app=PowerPoint&authkey=!AP-pDh4IMUug6vs)"
       banner: deferredMaterialRenderingSystem.png
     - title: How not to use DLLs
       banner: howNotToUseDlls.png

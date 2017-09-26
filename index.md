@@ -13,7 +13,7 @@ nonsense:
       description: "Runtime loading of *object* files, relocation of DLLs. Mostly harmful stuff. [Article here.](posts/how-not-to-use-dlls/)"
     - title: Stochastic Screen-Space Reflections
       vimeo: 115108688
-      description: "Importance sampled screen-space reflections with a novel spatiotemporal filter. I prototyped it in a toy engine written in the Rust language, and later ported to Frostbite. It first shipped it Mirror's Edge and Need for Speed.<br/><br/>
+      description: "Importance sampled screen-space reflections with a novel spatiotemporal filter. I prototyped it in a toy engine written in the Rust language, and later ported to Frostbite. It first shipped in Mirror's Edge and Need for Speed.<br/><br/>
       Check out the slides for my Siggraph 2015 talk which was part of [Advances in Real-Time Rendering in Games](http://advances.realtimerendering.com/s2015/)."
     - title: Frostbite
       description: "I worked in the Frostbite Rendering team in Stockholm for three years. My focus was Image Quality, and included physically-based rendering, tiled lighting, screen-space and planar reflections, skin shading, high dynamic range stuff (grading, display mapping, vendor-specific output), physically-inspired glare, checkerboard rendering, temporal anti-aliasing, motion blur, global illumination, as well as low-level PS4 and XB1 work. I even had some fun with Mantle. My code ended up in franchises like Battlefield, Mass Effect, Battlefront, Need For Speed, FIFA, Mirror's Edge, Plants vs Zombies, and a few others."

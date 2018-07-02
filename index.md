@@ -2,6 +2,9 @@
 layout: home
 title: "h3r2tic's grimoire"
 nonsense:
+    - title: "Raytracing in Hybrid Real-Time Rendering"
+      description: "A mini-game we developed at SEED for autonomous agents: [PICA PICA](https://www.ea.com/seed/news/seed-project-picapica); the cutest Skynet implementation around.<br/><br/>It sports an unusual renderer: rasterization meets raytracing meets specialized denoising. I worked on global illumination, reflections, shadows, and a bunch more. Here's [some slides](https://www.ea.com/seed/news/seed-dd18-presentation-slides-raytracing) on those."
+      banner: picaPica.png
     - title: Hacking GCN via OpenGL
       description: "AMD's Graphics Core Next GPU architecture has a number of interesting features which one cannot access via standard APIs. I show how to hack around the OpenGL driver, and feed it native shaders written in GCN ISA instead of GLSL. [Slides here!](https://onedrive.live.com/view.aspx?resid=EBE7DEDA70D06DA0!107&app=PowerPoint&authkey=!AD-O3oq3Ung7pzk)"
       banner: hackingGcnWithOpengl.png

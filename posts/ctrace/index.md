@@ -18,6 +18,8 @@ Ok, ok, I'm just a pervert and I love abusing the D compiler.
 
 Anyway, how does it work ? The compiler doesn't produce an executable but spits out BGR pixel data instead. The whole idea is to compute the image using compile-time constructs only - lots of templates. Then the data is printed using 'pragma (msg, theData)'. There's one problem though - the memory requirements for generating even the simplest image are so high that it'd be impossible to create anything meaningful. The compiler doesn't just 'run' templates - it saves their symbols somewhere and looks them up when doing subsequent instantiations. This is why I'm using a program that runs the compile-time raytracing for short spans of pixels. It then reads the data the compiler prints and generates the final image by concatenating the output of several compilations.
 
+You can [download ctrace](ctrace.zip) and give it a try. Just run 'rdmd ctrun.d'. The resolution is defined in ctrun.d, scene description sits in ctrace.d.
+
 Note: ctrace was developed when D didn't have Compile Time Function Evaluation and uses only the functional sub-language of template metaprogramming. Using CTFE, ctrace could be made hundreds of times faster and look like normal runtime code. But then it wouldn't be fun anymore.
 
 <hr />

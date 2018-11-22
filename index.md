@@ -38,7 +38,7 @@ nonsense:
       description: "An excursion into an unusual territory for me -- game networking and physics synchronization. I had the ambition of making a Battlefield-like game, but that turned out to be too vast in scope... Surprise, surprise! In any case, it was a valuable and fun learning experience. I used ENet for the low-level networking, rolled an authority scheme on top of it, and synchronized a Havok physics simulation as well as gameplay logic."
     - title: Compile-time raytracing
       banner: ctrace.png
-      description: "Ok, this one is here just for the bragging rights. I claim to have written the world's first compile-time raytracer. That is, the compiler runs, and there's no executable generated. Instead, it prints garbage to *stdout*. Redirect it to a file, and you have an image. I did it in the D language before it even hit the 1.0 version, so it didn't have any of the modern compile-time function evaluation. [Old blurb here.](http://h3.gd/ctrace/)"
+      description: "Ok, this one is here just for the bragging rights. I claim to have written the world's first compile-time raytracer. That is, the compiler runs, and there's no executable generated. Instead, it prints garbage to *stdout*. Redirect it to a file, and you have an image. I did it in the D language before it even hit the 1.0 version, so it didn't have any of the modern compile-time function evaluation. [Old blurb here.](posts/ctrace/)"
 ---
 
 ![avatar](avatar.jpg){:style="float: right; margin: 1em; width: 128px" class="softShadow"}

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "How not to use DLLs"
+title: "Compile-time raytracing"
 ---
 
 _NOTE: This is old, circa 2006. ctrace was written with a pre-1.0 verison of the D language, and to my knowledge, was the world's first compile-time ray-tracer. See "metatrace":https://gitorious.org/metatrace (not my own) for the first one written in C++!_

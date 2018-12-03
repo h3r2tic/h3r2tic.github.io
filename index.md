@@ -45,7 +45,7 @@ nonsense:
 
 # Hello, world!
 
-My name is Tomasz Stachowiak, and I'm a professional madman. I mostly tinker with real-time graphics, and occasionally trace my path in Veach-land. By day I'm a reputable software engineer at [SEED](https://www.ea.com/seed), while at night I bask in the suffering of compilers and GPUs. Here's some of my nonsense:
+My name is Tomasz Stachowiak, and I'm a professional madman. I mostly tinker with real-time graphics, and occasionally trace my path in Veach-land. By day I'm a reputable software engineer at [Embark Studios](https://www.embark-studios.com/), while at night I bask in the suffering of compilers and GPUs. Here's some of my nonsense:
 
 {% for item in page.nonsense %}
 <h2 style="clear: left; padding-top: 1em">{{item.title}}</h2>

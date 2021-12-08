@@ -1,0 +1,30 @@
+# The URL the site will be built for
+base_url = "http://h3.gd"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+title = "h3r2tic's grimoire"
+description = "Technobabble and nonsense"
+theme = "anpu-zola-theme"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+#highlight_theme = "1337"
+#highlight_theme = "gruvbox-dark"
+highlight_theme = "boron"
+
+[extra]
+# Put all your custom variables here
+anpu_menu_links = [
+    { url = "$BASE_URL/about/", name = "About" },
+]

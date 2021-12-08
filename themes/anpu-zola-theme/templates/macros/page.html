@@ -1,0 +1,65 @@
+{% macro page_info(page) %}
+    <div class="article-info">
+        {% if page.date %}
+        <div class="article-date">{{ page.date | date(format=config.extra.anpu_date_format) }}</div>
+        {% endif %}
+        <div class="article-taxonomies">
+            {% if page.taxonomies.categories %}
+                <ul class="article-categories">
+                    {% for cat in page.taxonomies.categories %}
+                    <li><a href="{{ get_taxonomy_url(kind="categories", name=cat) | safe }}">{{ cat }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if page.taxonomies.tags %}
+                <ul class="article-tags">
+                    {% for tag in page.taxonomies.tags %}
+                    <li><a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">#{{ tag }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro page_info %}
+
+{% macro page_listing(page) %}
+    <article class="post-list">
+        <header> 
+            <h1>
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </h1>
+        </header>
+
+        {% if page.extra.banner_image %}
+            {% set banner_image = resize_image(path=page.path ~ page.extra.banner_image, width=512, op="fit_width") %}
+            <a href="{{ page.permalink }}"><img class="post-banner" src="{{ banner_image.url }}" /></a>
+        {% endif %}
+
+        {% if page.extra.banner_vimeo %}
+            <iframe class="post-banner" src="https://player.vimeo.com/video/{{ page.extra.banner_vimeo }}?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" height="256" frameborder="0"></iframe>
+        {% endif %}
+
+        {% if page.summary %}
+        <div class="content post-summary">
+            {{ page.summary | markdown | safe }}
+        </div>
+        {% endif %}
+        
+        {{ self::page_info(page=page) }}
+    </article>
+{% endmacro page_listing %}
+
+{% macro page_pagination(paginator) %}
+    <div class="pagination">
+        <div class="left pagination-item {% if not paginator.previous %}disabled{% endif %}">
+            {% if paginator.previous %}
+            <a href="{{ paginator.previous }}">‹ Newer posts</a>
+            {% endif %}
+        </div>
+        <div class="right pagination-item {% if not paginator.next %}disabled{% endif %}">
+            {% if paginator.next %}
+            <a href="{{ paginator.next }}">Older posts ›</a>
+            {% endif %}
+        </div>
+    </div>
+{% endmacro page_pagination %}

@@ -1,0 +1,89 @@
+{% import "macros/page.html" as page_macros %}
+<!DOCTYPE html>
+<html lang="{% if lang %}{{ lang }}{% else %}en{% endif %}">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{{ config.description }}">
+
+    <link rel="stylesheet" href="{{ get_url(path="main.css", trailing_slash=false) }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% if config.generate_feed %}
+        <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    {% endif %}
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to content</a>
+    <div class="container">
+        <header> 
+            <h1 class="site-header">
+                <a href="{{ config.base_url }}">{{ config.title }}</a>
+            </h1>
+            <nav>
+                <a href="https://github.com/h3r2tic/"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/h3r2tic/"><i class="fa fa-twitter"></i></a>
+
+                {% block sidebar_nav %}
+                {% for menu_link in config.extra.anpu_menu_links %}
+                {% set link_url = menu_link.url | replace(from="$BASE_URL", to=config.base_url) %}
+                <a {% if current_url and current_url == link_url %}class="active"{% endif %} href="{{ link_url }}">{{menu_link.name}}</a>
+                {% endfor %}
+                {% endblock sidebar_nav %}
+            </nav>
+        </header>
+        <main id="main" tabindex="-1">
+            {% block content %}
+                {% if paginator.pages %}
+                {% for page in paginator.pages %}
+                    {{ page_macros::page_listing(page=page) }}
+                {% endfor %}
+                {{ page_macros::page_pagination(paginator=paginator) }}
+                {% else %}
+                {% for page in section.pages %}
+                    {{ page_macros::page_listing(page=page) }}
+                {% endfor %}
+                {% endif %}
+            {% endblock content %}
+        </main>
+        <footer>
+            <p>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Tomasz Stachowiak</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />
+                Powered by <a target="_blank" href="https://getzola.org/">Zola</a>, Theme based on <a target="_blank" href="https://github.com/zbrox/anpu-zola-theme">Anpu</a>.
+            </p>
+            <p>
+                {% block footer %}
+                {% endblock footer %}
+            </p>
+        </footer>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+              // customised options
+              // • auto-render specific keys, e.g.:
+              delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false},
+                  {left: '\\(', right: '\\)', display: false},
+                  {left: '\\[', right: '\\]', display: true}
+              ],
+              // • rendering keys, e.g.:
+              throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>h3r2tic&#x27;s grimoire</title>
+	<subtitle>Technobabble and nonsense</subtitle>
+	<link href="https://h3.gd/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://h3.gd"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-12-20T00:00:00+00:00</updated>
+	<id>https://h3.gd/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Kajiya renderer</title>
+		<published>2021-12-20T00:00:00+00:00</published>
+		<updated>2021-12-20T00:00:00+00:00</updated>
+		<link href="https://h3.gd/kajiya/" type="text/html"/>
+		<id>https://h3.gd/kajiya/</id>
+		<content type="html">&lt;p&gt;💡 Experimental real-time global illumination... toy 🦀&lt;&#x2F;p&gt;
+&lt;p&gt;Done in my spare time at Embark, &lt;code&gt;kajiya&lt;&#x2F;code&gt; is an evolving excursion into real-time global illumination algorithms. Having gone through surfels and morphological inverse cone tracing (🤪), it&#x27;s now fully infused with ReSTIR and irradiance caching.&lt;&#x2F;p&gt;
+&lt;p&gt;Permissively licensed &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;EmbarkStudios&#x2F;kajiya&#x2F;&quot;&gt;on GitHub&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;kajiya&#x2F;kajiya.jpg&quot; alt=&quot;derp&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;evermotion.org&#x2F;shop&#x2F;show_product&#x2F;archinteriors-for-ue-vol-1-remastered&#x2F;18545&quot;&gt;Apartment scene&lt;&#x2F;a&gt; by Evermotion. &lt;a href=&quot;https:&#x2F;&#x2F;www.unrealengine.com&#x2F;marketplace&#x2F;en-US&#x2F;product&#x2F;modular-ruins-c&quot;&gt;Ruins scene&lt;&#x2F;a&gt; by Crebotoly.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>An unholy fusion of Rust and C++ in physx-rs</title>
+		<published>2019-10-23T00:00:00+00:00</published>
+		<updated>2019-10-23T00:00:00+00:00</updated>
+		<link href="https://h3.gd/unholy-fusion-rust-physx/" type="text/html"/>
+		<id>https://h3.gd/unholy-fusion-rust-physx/</id>
+		<content type="html">&lt;p&gt;Unsafe automatically-generated Rust bindings for the NVIDIA PhysX C++ API.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;I did the weird low-level bits, Tom Solberg the sane high-level bits, and then a lot of lovely people contributed a ton more.&lt;&#x2F;p&gt;
+&lt;p&gt;Project page: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;EmbarkStudios&#x2F;physx-rs&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;EmbarkStudios&#x2F;physx-rs&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;iframe width=&quot;1020&quot; height=&quot;630&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;RxtXGeDHu0w&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;br &#x2F;&gt;
+&lt;iframe src=&quot;https:&#x2F;&#x2F;onedrive.live.com&#x2F;embed?cid=EBE7DEDA70D06DA0&amp;amp;resid=EBE7DEDA70D06DA0%21130345&amp;amp;authkey=AFpHFzQwnzdYkDY&amp;amp;em=2&amp;amp;wdAr=1.7777777777777777&quot; width=&quot;962px&quot; height=&quot;565px&quot; frameborder=&quot;0&quot;&gt;This is an embedded &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&quot;&gt;Microsoft Office&lt;&#x2F;a&gt; presentation, powered by &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&#x2F;webapps&quot;&gt;Office&lt;&#x2F;a&gt;.&lt;&#x2F;iframe&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Raytracing in Hybrid Real-Time Rendering</title>
+		<published>2018-03-20T00:00:00+00:00</published>
+		<updated>2018-03-20T00:00:00+00:00</updated>
+		<link href="https://h3.gd/raytracing-in-hybrid-real-time-rendering/" type="text/html"/>
+		<id>https://h3.gd/raytracing-in-hybrid-real-time-rendering/</id>
+		<content type="html">&lt;p&gt;At SEED we developed a mini-game for autonomous agents: PICA PICA. It was the cutest Skynet implementation around.&lt;&#x2F;p&gt;
+&lt;p&gt;It used a hybrid renderer: rasterization meets raytracing meets specialized denoising. I worked on global illumination, reflections, shadows, and a bunch more.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;iframe width=&quot;1020&quot; height=&quot;630&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;LXo0WdlELJk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links:&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ea.com&#x2F;seed&#x2F;news&#x2F;seed-project-picapica&quot;&gt;EA SEED project page about PICA PICA&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.ea.com&#x2F;seed&#x2F;news&#x2F;seed-dd18-presentation-slides-raytracing&quot;&gt;EA SEED page about my presentation&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;my-talk-at-digital-dragons-2018&quot;&gt;My talk at Digital Dragons 2018&lt;&#x2F;h2&gt;
+&lt;iframe width=&quot;1020&quot; height=&quot;630&quot; src=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;MyTOGHqyquU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+&lt;h2 id=&quot;slides&quot;&gt;Slides&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;em&gt;Please see the EA sites for PPTX and PDF files&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;iframe src=&quot;&#x2F;&#x2F;www.slideshare.net&#x2F;slideshow&#x2F;embed_code&#x2F;key&#x2F;tfgePcmSAxcvGz&quot; width=&quot;1020&quot; height=&quot;630&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>How not to use DLLs</title>
+		<published>2017-07-05T00:00:00+00:00</published>
+		<updated>2017-07-05T00:00:00+00:00</updated>
+		<link href="https://h3.gd/how-not-to-use-dlls/" type="text/html"/>
+		<id>https://h3.gd/how-not-to-use-dlls/</id>
+		<content type="html">&lt;p&gt;Runtime loading of object files, relocation of DLLs. Mostly harmful stuff.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;&#x2F;h1&gt;
+&lt;p&gt;The code described in this note doesn&#x27;t really aim to be pragmatic. Treat it as a curiosity rather than a recommendation. In fact, you probably don&#x27;t want to use any of this nonsense in production environments (or even in most experimental environments).&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;Back in a previous life when I was a D programmer, I contributed to a project called &lt;a href=&quot;http:&#x2F;&#x2F;www.dsource.org&#x2F;projects&#x2F;ddl&quot;&gt;&lt;em&gt;D Dynamic Libraries&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. It was a pretty crazy system which on Windows provided means of loading plugins without the need for DLLs. &lt;em&gt;DDL&lt;&#x2F;em&gt; would load compiler-generated object files directly, and link them at runtime. For the D language it was a pretty major deal, as DLLs were severely broken at the time.&lt;&#x2F;p&gt;
+&lt;p&gt;When I recently overheard &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;gwihlidal&quot;&gt;@gwihlidal&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;repi&quot;&gt;@repi&lt;&#x2F;a&gt; discuss their annoyances with DLLs, I figured &amp;quot;hold my beer&amp;quot;, and went on to re-implement an ad-hoc version of &lt;em&gt;D Dynamic Libraries&lt;&#x2F;em&gt; in C++.&lt;&#x2F;p&gt;
+&lt;p&gt;What are the annoyances? Here&#x27;s a couple:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Duplication of symbols&lt;&#x2F;li&gt;
+&lt;li&gt;Windows locking the DLL files while they&#x27;re loaded&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Symbol duplication can cause problems with anything using globals; singletons will not be lonely either. They end up fully defined in both the host and plugins, rather than provided by just one (the host). This may impact RTTI systems, allocators, logging, etc. It also means potentially longer link times and plugins larger than they should be.&lt;&#x2F;p&gt;
+&lt;p&gt;I used to think this was a hard limitation of DLLs, in that they could not pull symbols from the host. It turns out that I was mistaken; one can use &lt;em&gt;dllexport&lt;&#x2F;em&gt; in the host, &lt;em&gt;dllimport&lt;&#x2F;em&gt; in the plugin, create an &lt;em&gt;import library&lt;&#x2F;em&gt; for the host, and provide it when linking the DLL. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mesonbuild&#x2F;meson&#x2F;issues&#x2F;1623&quot;&gt;Here&#x27;s one example I found&lt;&#x2F;a&gt;. When I tried it, the &lt;em&gt;dllexport&lt;&#x2F;em&gt; wasn&#x27;t actually &lt;em&gt;needed&lt;&#x2F;em&gt; for functions, but it was necessary for variables. If you don&#x27;t have full control over all code, it might be tricky to add &lt;em&gt;dllimport&lt;&#x2F;em&gt; to all the globals.&lt;&#x2F;p&gt;
+&lt;p&gt;One might actually argue that #1 is a Good Thing as it enforces strict separation between the host and plugins, and results in cleaner architectures. But I&#x27;m not here to argue that (see disclaimer).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img alt=&quot;Your scientists were so preoccupied with whether or not they could, they didn’t stop to think if they should&quot; src=&quot;forScience.jpg&quot; style=&quot;width: 75%&quot;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Item #2 mostly pops up when rolling a code hot-swap system. It can be easily worked around, but if we reinvent the wheel, we don&#x27;t need to work around it :P&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;running-code-from-object-files&quot;&gt;Running code from object files&lt;&#x2F;h1&gt;
+&lt;p&gt;Suppose we have a &lt;em&gt;plugin.cpp&lt;&#x2F;em&gt; file with a simple function like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; a + b;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;When we compile it, the resulting object file will contain the final executable code. We can actually just &lt;em&gt;fread()&lt;&#x2F;em&gt; it, find the location of the machine code, and call it. In order to appease Windows, we need to mark the memory executable with &lt;em&gt;VirtualProtect()&lt;&#x2F;em&gt;, but that&#x27;s basically it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	CoffBinary coff;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;openCoff&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;plugin.obj&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &amp;amp;coff)) {
+&lt;&#x2F;span&gt;&lt;span&gt;		coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;unsigned long&lt;&#x2F;span&gt;&lt;span&gt; prevProtect;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;VirtualProtect&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;			coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rawData&lt;&#x2F;span&gt;&lt;span&gt;, coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rawDataSize&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;			PAGE_EXECUTE_READWRITE, &amp;amp;prevProtect);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;auto&lt;&#x2F;span&gt;&lt;span&gt; foo = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;(*)(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;			(coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rawData &lt;&#x2F;span&gt;&lt;span&gt;+ coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sections&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PointerToRawData&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;		printf(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;foo(2, 3) = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;	}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	getchar();
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;runobj1.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here I&#x27;m using a simple parser for the &lt;em&gt;Common Object File Format&lt;&#x2F;em&gt; (COFF) which I quickly cobbled together using &lt;a href=&quot;http:&#x2F;&#x2F;www.microsoft.com&#x2F;whdc&#x2F;system&#x2F;platform&#x2F;firmware&#x2F;PECOFF.mspx&quot;&gt;Microsoft&#x27;s PE&#x2F;COFF specification&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Things get more complicated when our function tries to reference other symbols, e.g.:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;cstdio&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;	puts(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;foo called()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; a + b;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;runobj2.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;We get a crash because the code is trying to perform a call to an unresolved function.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;runobj3.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The generated call address is relative to the next instruction, and by default that offset is zero:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;runobj4.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;runtime-linking&quot;&gt;Runtime linking&lt;&#x2F;h2&gt;
+&lt;p&gt;In order to run this code we need to &lt;em&gt;resolve&lt;&#x2F;em&gt; all unreferenced symbols. We do this by &lt;em&gt;linking&lt;&#x2F;em&gt; the loaded binary image to our application at runtime.&lt;&#x2F;p&gt;
+&lt;p&gt;An object file contains a number of sections, each potentially comprising data, executable code, debug symbols, and other stuff. Each section also contains a list of relocations. A relocation is a triple of:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Offset into the section&lt;&#x2F;strong&gt; specifying a location where the relocation must be applied&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Index of the symbol&lt;&#x2F;strong&gt; that the location must be adjusted to point at&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;&#x2F;strong&gt; of the relocation&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;img src=&quot;reloc.png&quot; style=&quot;width: 75%&quot; &#x2F;&gt;
+&lt;p&gt;In our simple case, the relocation type is a 32-bit offset relative to the next instruction. It means that the value we write when performing the relocation is not the address of the target symbol, but the offset to it from the address following the one we write. There are a few other relocation types, for example absolute 64-bit ones, but we only need to handle one type here.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Initialize DbgHelp so we can look-up symbols in the host.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SymInitialize&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;GetCurrentProcess&lt;&#x2F;span&gt;&lt;span&gt;(), nullptr, TRUE);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;auto&lt;&#x2F;span&gt;&lt;span&gt;&amp;amp; rel : coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;getSectionRelocations&lt;&#x2F;span&gt;&lt;span&gt;(coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sections&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;])) {
+&lt;&#x2F;span&gt;&lt;span&gt;	CoffBinary::Symbol&amp;amp; sym = coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;symbols&lt;&#x2F;span&gt;&lt;span&gt;[rel.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SymbolTableIndex&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;* relSource = nullptr;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(CoffBinary::SymClassStatic == sym.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;StorageClass&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Reference to a static data segment in the OBJ
+&lt;&#x2F;span&gt;&lt;span&gt;		relSource =
+&lt;&#x2F;span&gt;&lt;span&gt;			coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rawData &lt;&#x2F;span&gt;&lt;span&gt;+
+&lt;&#x2F;span&gt;&lt;span&gt;			coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sections&lt;&#x2F;span&gt;&lt;span&gt;[sym.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SectionNumber &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PointerToRawData &lt;&#x2F;span&gt;&lt;span&gt;+
+&lt;&#x2F;span&gt;&lt;span&gt;			sym.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Value&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;	} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else if &lt;&#x2F;span&gt;&lt;span&gt;(CoffBinary::SymClassExternal == sym.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;StorageClass&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; External reference. Use DbgHelp to find symbol in host app
+&lt;&#x2F;span&gt;&lt;span&gt;		SYMBOL_INFO symbol = {};
+&lt;&#x2F;span&gt;&lt;span&gt;		symbol.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SizeOfStruct &lt;&#x2F;span&gt;&lt;span&gt;= sizeof(SYMBOL_INFO);
+&lt;&#x2F;span&gt;&lt;span&gt;		std::string symName = coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;decodeString&lt;&#x2F;span&gt;&lt;span&gt;(sym.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Name&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SymFromName&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;GetCurrentProcess&lt;&#x2F;span&gt;&lt;span&gt;(), symName.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;c_str&lt;&#x2F;span&gt;&lt;span&gt;(), &amp;amp;symbol)) {
+&lt;&#x2F;span&gt;&lt;span&gt;			relSource = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;*)symbol.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Address&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;		}
+&lt;&#x2F;span&gt;&lt;span&gt;	}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Address that needs patching up
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;* relTarget = coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rawData &lt;&#x2F;span&gt;&lt;span&gt;+
+&lt;&#x2F;span&gt;&lt;span&gt;		coff.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sections&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PointerToRawData &lt;&#x2F;span&gt;&lt;span&gt;+ rel.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;VirtualAddress&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Write relative offset. Next instruction is 4 bytes after destination.
+&lt;&#x2F;span&gt;&lt;span&gt;	*(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;*)relTarget = relSource - relTarget - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now when we run our app, we get the following:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;runobj5.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is a basic version of runtime linking which completely bypasses DLL files. In &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;h3r2tic&#x2F;runobj&quot;&gt;my github repository&lt;&#x2F;a&gt; you can find a slightly more complete implementation which doesn&#x27;t arbitrarily resolve only section three. It uses a different &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;serge1&#x2F;COFFI&quot;&gt;COFF parser&lt;&#x2F;a&gt; which I had borrowed from Serge Lamikhov-Center before I wrote my own. The sample also reads the host&#x27;s MAP file to extract information about symbol locations, as even DbgHelp fails to find them all.&lt;&#x2F;p&gt;
+&lt;p&gt;In practice one would also need to resolve multiple object files against each other, handle all relocation types, potentially create exception frames, and then some.&lt;&#x2F;p&gt;
+&lt;p&gt;I didn&#x27;t get that far though.&lt;&#x2F;p&gt;
+&lt;img src=&quot;runobj6.png&quot; style=&quot;width: 75%&quot; &#x2F;&gt;
+&lt;p&gt;I got kinda stuck at trying to make Visual Studio&#x27;s debugger load the debug info for the manually linked code. There are WinApi functions like &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;windows&#x2F;desktop&#x2F;ms680588(v=vs.85).aspx&quot;&gt;RtlAddFunctionTable&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;windows&#x2F;desktop&#x2F;ms680664(v=vs.85).aspx&quot;&gt;SymAddSymbol&lt;&#x2F;a&gt; which in theory can be used to feed extra symbols and debug info to DbgHelp and the CRT. It seems however that debuggers don&#x27;t use whatever information the executable provides via those APIs, and have their own view of the debugee&#x27;s symbols.&lt;&#x2F;p&gt;
+&lt;p&gt;If you know a trick to get debug symbols to work with manual code loading, and it doesn&#x27;t involve writing a debug engine, I would be very curious to learn about it. In the meantime though...&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;going-back-to-dlls&quot;&gt;Going back to DLLs&lt;&#x2F;h1&gt;
+&lt;p&gt;At this stage I had a working COFF reader&#x2F;writer, and I was ready to get nasty. I figured that in order to get debug info, I had to use DLLs after all. Surely if it&#x27;s possible to manually link object files, something similar could be done to DLLs.&lt;&#x2F;p&gt;
+&lt;p&gt;The idea is to create a &amp;quot;broken&amp;quot; DLL with unreferenced&#x2F;invalid symbols, load it using standard WinApi functions, and &lt;em&gt;then&lt;&#x2F;em&gt; link it at runtime, thus fixing it. How do we create that &amp;quot;broken&amp;quot; DLL? Glad you asked.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modify whatever object files go into the DLL, marking unresolved symbols resolved. It&#x27;s pretty simple really: if a symbol&#x27;s section index is zero, set it to anything greater than zero. It&#x27;s ugly but it works.&lt;&#x2F;li&gt;
+&lt;li&gt;... just use a few flags for link.exe: &lt;strong&gt;&#x2F;noentry &#x2F;nodefaultlib &#x2F;force&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;img src=&quot;honeyBadgerDontCare.jpg&quot; style=&quot;width: 50%&quot; &#x2F;&gt;
+&lt;p&gt;The latter is pretty amazing in a way. The linker will report a bunch of errors, but then still produce a DLL. We can load it just fine, but any code using the unreferenced symbols will have a bad time. Let&#x27;s fix it next.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;relocating-a-dll-at-runtime&quot;&gt;Relocating a DLL at runtime&lt;&#x2F;h2&gt;
+&lt;p&gt;The good news is that the DLL is internally linked, meaning that references to its own symbols are properly resolved. We don&#x27;t need to fix all the symbols ourselves. The bad news however is that there&#x27;s no relocation table anymore, and the linker has reshuffled the contents of our object file, so we can&#x27;t trivially use the relocation table from our source objects.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;relocRemapWut.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Relocations are provided as locations within sections that need to be pointed at specific symbols. Contents of sections are moved around by the linker, but not arbitrarily -- the linker will not reshuffle every instruction. If we identify how chunks of code correlate between the objects and the final DLL, we can relocate the DLL.&lt;&#x2F;p&gt;
+&lt;p&gt;Given an address within a section, we can find the last symbol whose location is less than or equal the address. If we sort all symbols in a section by their location, this becomes a simple binary search. Using this translation, a relocation becomes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A symbol specifying a location &lt;em&gt;within&lt;&#x2F;em&gt; which we need to apply the relocation&lt;&#x2F;li&gt;
+&lt;li&gt;An offset into the symbol&#x27;s location&lt;&#x2F;li&gt;
+&lt;li&gt;The symbol at which we need to point&lt;&#x2F;li&gt;
+&lt;li&gt;Type of relocation (rel32, addr64, etc.)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;We can then use a linker-generated &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;k7xkk3e2.aspx&quot;&gt;map of the DLL&lt;&#x2F;a&gt; to look-up its symbols, and apply relocations.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;relocRemap.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;What does all this madness get us? We got debug symbols back! On the other hand, since we&#x27;re once again in DLL land, Windows will insist on locking the file... At least we have gotten rid of the symbol duplication, which was the main goal. For example, this works:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; plugin.cpp
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;cstdio&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;extern int&lt;&#x2F;span&gt;&lt;span&gt; myGlobal;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;extern &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;C&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;__declspec&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;dllexport&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	printf(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;myGlobal: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, myGlobal);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; host.cpp
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; myGlobal = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;666&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	SymbolMap hostMap = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;parseMapFile&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;host.map&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;*)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;GetModuleHandle&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;	HMODULE dll = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;loadAndRelocatePlugin&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;plugin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, hostMap);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;auto&lt;&#x2F;span&gt;&lt;span&gt; foo = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;void&lt;&#x2F;span&gt;&lt;span&gt;(*)())&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;GetProcAddress&lt;&#x2F;span&gt;&lt;span&gt;(dll, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;foo&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;how-not-to-use-dlls&#x2F;relocdll1.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can grab a basic implementation of manual DLL relocation in another &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;h3r2tic&#x2F;relocdll&quot;&gt;repository of mine&lt;&#x2F;a&gt;. It still only uses just one OBJ file for the plugin, but the concept should scale to more complex cases. It&#x27;s still far from tested, and I might be missing some important pieces of info which might invalidate this approach. Again, take it with a grain of salt.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;32-bit-relative-addresses&quot;&gt;32-bit relative addresses&lt;&#x2F;h1&gt;
+&lt;p&gt;There&#x27;s one more important detail I haven&#x27;t covered yet; it applies to both DLL and object loading. Even on 64-bit systems, compilers will generate &lt;a href=&quot;http:&#x2F;&#x2F;www.felixcloutier.com&#x2F;x86&#x2F;CALL.html&quot;&gt;32-bit relative call&lt;&#x2F;a&gt; instructions. That is, the target address is a signed 32-bit integer specifying an offset from the instruction following the call.&lt;&#x2F;p&gt;
+&lt;p&gt;This means that all code must sit within (realistically) a 2GB &lt;strong&gt;virtual memory&lt;&#x2F;strong&gt; range. A single application will easily satisfy that &lt;em&gt;(*cough* unless it links certain GUI middleware)&lt;&#x2F;em&gt;. When Windows loads a DLL however, it typically places it pretty far in virtual address space from the host. Compilers will generate 64-bit calls for function pointers, so calling the plugin&#x27;s interface is fine, however the code within the plugin will be using lots of 32-bit offsets. Since we&#x27;re linking the plugin to our host app, those 32-bit offsets are in trouble.&lt;&#x2F;p&gt;
+&lt;p&gt;In the case of object files, we can use &lt;em&gt;VirtualAlloc&lt;&#x2F;em&gt; to allocate the memory for our plugin. That way we can specify the address, and make sure it will sit within a 32-bit offset from our host&#x27;s code. There&#x27;s no &lt;em&gt;LoadLibrary&lt;&#x2F;em&gt; parameter to specify the load address of a DLL though, so we need to get dirty.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, Microsoft will tell us that we should not mess with &lt;a href=&quot;https:&#x2F;&#x2F;blogs.msdn.microsoft.com&#x2F;winsdk&#x2F;2009&#x2F;11&#x2F;30&#x2F;how-to-disable-address-space-layout-randomization-aslr&#x2F;&quot;&gt;Address Layout Space Randomization&lt;&#x2F;a&gt;, but in practice we can pass &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;w368ysh2.aspx&quot;&gt;&#x2F;FIXED&lt;&#x2F;a&gt; to the linker, specify a &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;f7f5138s.aspx&quot;&gt;preferred load address&lt;&#x2F;a&gt;, and if that address is available, our DLL will end up there.&lt;&#x2F;p&gt;
+&lt;p&gt;We can also modify the preferred load address of the DLL ourselves. It&#x27;s just the &lt;em&gt;&amp;quot;ImageBase&amp;quot;&lt;&#x2F;em&gt; value in the &lt;a href=&quot;https:&#x2F;&#x2F;msdn.microsoft.com&#x2F;en-us&#x2F;library&#x2F;windows&#x2F;desktop&#x2F;ms680339(v=vs.85).aspx&quot;&gt;optional PE header&lt;&#x2F;a&gt;. Putting it all together, we get:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get the address of the host application via GetModuleHandle(nullptr).&lt;&#x2F;li&gt;
+&lt;li&gt;Open the DLL as a regular file, modify the preferred load address, and close it.&lt;&#x2F;li&gt;
+&lt;li&gt;LoadLibrary&lt;&#x2F;li&gt;
+&lt;li&gt;???&lt;&#x2F;li&gt;
+&lt;li&gt;DLL magically appears at our desired location. PROFIT!&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;epilogue&quot;&gt;Epilogue&lt;&#x2F;h1&gt;
+&lt;p&gt;I hope this was somewhat educational or at least mildly entertaining. I guess the main point I&#x27;m trying to get through is that linkers aren&#x27;t magic, and you can move some of their work to runtime.&lt;&#x2F;p&gt;
+&lt;p&gt;I still don&#x27;t recommend using any of this in the real world, but perhaps there are some crazy cases in which it would be useful &lt;em&gt;(Just In Time compilers? dev-only code hot-swap?)&lt;&#x2F;em&gt;. Just please don&#x27;t send ninjas my way when something explodes :D&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>A deferred material rendering system</title>
+		<published>2015-12-18T00:00:00+00:00</published>
+		<updated>2015-12-18T00:00:00+00:00</updated>
+		<link href="https://h3.gd/a-deferred-material-rendering-system/" type="text/html"/>
+		<id>https://h3.gd/a-deferred-material-rendering-system/</id>
+		<content type="html">&lt;p&gt;Practical application of the GCN hacks: indirect dispatch of lots of unique compute shaders and native barycentric coordinate access. Those allows for efficient surface shading in a deferred manner without the use of ubershaders. Geometry and material descriptions can be decoupled, and we gain a lot of control over shading frequency. &lt;a href=&quot;https:&#x2F;&#x2F;onedrive.live.com&#x2F;view.aspx?resid=EBE7DEDA70D06DA0!115&amp;amp;app=PowerPoint&amp;amp;authkey=!AP-pDh4IMUug6vs&quot;&gt;Slides here!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;iframe src=&quot;https:&#x2F;&#x2F;onedrive.live.com&#x2F;embed?cid=EBE7DEDA70D06DA0&amp;amp;resid=EBE7DEDA70D06DA0%21115&amp;amp;authkey=AHpLVk8Nlns_fhA&amp;amp;em=2&amp;amp;wdAr=1.7777777777777777&quot; width=&quot;962px&quot; height=&quot;565px&quot; frameborder=&quot;0&quot;&gt;This is an embedded &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&quot;&gt;Microsoft Office&lt;&#x2F;a&gt; presentation, powered by &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&#x2F;webapps&quot;&gt;Office&lt;&#x2F;a&gt;.&lt;&#x2F;iframe&gt;</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Hacking GCN via OpenGL</title>
+		<published>2015-11-20T00:00:00+00:00</published>
+		<updated>2015-11-20T00:00:00+00:00</updated>
+		<link href="https://h3.gd/hacking-gcn-via-opengl/" type="text/html"/>
+		<id>https://h3.gd/hacking-gcn-via-opengl/</id>
+		<content type="html">&lt;p&gt;AMD’s Graphics Core Next GPU architecture has a number of interesting features which one cannot access via standard APIs. I show how to hack around the OpenGL driver, and feed it native shaders written in GCN ISA instead of GLSL. &lt;a href=&quot;https:&#x2F;&#x2F;onedrive.live.com&#x2F;view.aspx?resid=EBE7DEDA70D06DA0!107&amp;amp;app=PowerPoint&amp;amp;authkey=!AD-O3oq3Ung7pzk&quot;&gt;Slides here!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;iframe src=&quot;https:&#x2F;&#x2F;onedrive.live.com&#x2F;embed?cid=EBE7DEDA70D06DA0&amp;amp;resid=EBE7DEDA70D06DA0%21107&amp;amp;authkey=ACo8Aj_f_tMl4Vs&amp;amp;em=2&amp;amp;wdAr=1.7777777777777777&quot; width=&quot;962px&quot; height=&quot;565px&quot; frameborder=&quot;0&quot;&gt;This is an embedded &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&quot;&gt;Microsoft Office&lt;&#x2F;a&gt; presentation, powered by &lt;a target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;office.com&#x2F;webapps&quot;&gt;Office&lt;&#x2F;a&gt;.&lt;&#x2F;iframe&gt;</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Stochastic Screen-Space Reflections</title>
+		<published>2015-08-10T00:00:00+00:00</published>
+		<updated>2015-08-10T00:00:00+00:00</updated>
+		<link href="https://h3.gd/stochastic-ssr/" type="text/html"/>
+		<id>https://h3.gd/stochastic-ssr/</id>
+		<content type="html">&lt;p&gt;Importance sampled screen-space reflections with a novel spatiotemporal filter. I prototyped it in a toy engine written in the Rust language, and later ported to Frostbite, working closely with Yasin Uludag. It first shipped in Mirror’s Edge and Need for Speed.&lt;&#x2F;p&gt;
+&lt;p&gt;Check out the slides for my Siggraph 2015 talk which was part of &lt;a href=&quot;http:&#x2F;&#x2F;advances.realtimerendering.com&#x2F;s2015&#x2F;&quot;&gt;Advances in Real-Time Rendering in Games&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;stochastic-ssr&#x2F;sponza.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Turns out it was a ratio estimator all along. Thanks for pointing that out, Ari Silvennoinen.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;follow-ups&quot;&gt;Follow-ups&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;raytracing-in-hybrid-real-time-rendering&#x2F;&quot;&gt;Raytracing in Hybrid Real-Time Rendering&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;&#x2F;restir-reflections&#x2F;&quot;&gt;Combining ReSTIR and ratio estimation for ray-traced reflections&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Compile-time raytracing</title>
+		<published>2006-01-01T00:00:00+00:00</published>
+		<updated>2006-01-01T00:00:00+00:00</updated>
+		<link href="https://h3.gd/ctrace/" type="text/html"/>
+		<id>https://h3.gd/ctrace/</id>
+		<content type="html">&lt;p&gt;A compile-time raytracer written in the D Programming Language.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;em&gt;NOTE: This is old, circa 2006. ctrace was written with a pre-1.0 verison of the D language, and to my knowledge, was the world&#x27;s first compile-time ray-tracer. See &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;phresnel&#x2F;metatrace&quot;&gt;metatrace&lt;&#x2F;a&gt; (not my own) for the first one written in C++!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;why&quot;&gt;Why ?&lt;&#x2F;h1&gt;
+&lt;p&gt;Why would anyone create anything like this ? The rendering times are terrible, code is harder to write... but I think it&#x27;s a nice demonstration of metaprogramming in D.
+Ok, ok, I&#x27;m just a pervert and I love abusing the D compiler.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how&quot;&gt;How ?&lt;&#x2F;h1&gt;
+&lt;p&gt;Anyway, how does it work ? The compiler doesn&#x27;t produce an executable but spits out BGR pixel data instead. The whole idea is to compute the image using compile-time constructs only - lots of templates. Then the data is printed using &#x27;pragma (msg, theData)&#x27;. There&#x27;s one problem though - the memory requirements for generating even the simplest image are so high that it&#x27;d be impossible to create anything meaningful. The compiler doesn&#x27;t just &#x27;run&#x27; templates - it saves their symbols somewhere and looks them up when doing subsequent instantiations. This is why I&#x27;m using a program that runs the compile-time raytracing for short spans of pixels. It then reads the data the compiler prints and generates the final image by concatenating the output of several compilations.&lt;&#x2F;p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;ctrace.zip&quot;&gt;download ctrace&lt;&#x2F;a&gt; and give it a try. Just run &#x27;rdmd ctrun.d&#x27;. The resolution is defined in ctrun.d, scene description sits in ctrace.d.&lt;&#x2F;p&gt;
+&lt;p&gt;Note: ctrace was developed when D didn&#x27;t have Compile Time Function Evaluation and uses only the functional sub-language of template metaprogramming. Using CTFE, ctrace could be made hundreds of times faster and look like normal runtime code. But then it wouldn&#x27;t be fun anymore.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Here are some generated images which I saved during the development of ctrace:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;first%20attempts.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;One of the very first attempts of compile-time raytracing&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;first%20bugs.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I added support for colored materials, but it turned out that my ray-sphere intersection code was producing incorrect surface normals. The image above was supposed to have one directional light aimed at [0, 0, -1]&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;bugs%20fixed.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Slightly different scene with one main white light and a red backlight. Sphere intersection bugs fixed.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;reflections.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Now with a ground plane and reflections&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;better%20lighting.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;features += boxes | shadows | pointLights; 
+the raytracing wasn&#x27;t fully recursive at that point, so reflections are a bit bogus&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;recursion.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Now with fully-recursive raytracing with depth set to 3&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;triangles.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Added triangle support and traced a D logo. Somehow there are some incorrect pixels&lt;&#x2F;p&gt;
+&lt;p&gt;h2. And now, for the real thing...&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;h3.gd&#x2F;ctrace&#x2F;big%20one.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Total rendering&#x2F;compilation time: 26148 seconds (on my 1.7GHz laptop)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;d&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-d &quot;&gt;&lt;code class=&quot;language-d&quot; data-lang=&quot;d&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Tuple&lt;&#x2F;span&gt;&lt;span&gt;!(
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Sphere&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;),	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;3.2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;)),
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Sphere&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;5.0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;),	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1.2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;)),
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Sphere&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.7&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4.2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;),	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;)),
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Plane&lt;&#x2F;span&gt;&lt;span&gt;! (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;),	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;scene&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Tuple&lt;&#x2F;span&gt;&lt;span&gt;!(
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PointLight&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;),   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;scale&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.7&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.7&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.6&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;30&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;)),
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PointLight&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2.5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;scale&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Vec3&lt;&#x2F;span&gt;&lt;span&gt;!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.6&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.4&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;.1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;lights&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+	</entry>
+</feed>

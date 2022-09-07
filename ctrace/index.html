@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>Compile-time raytracing</title>
+    <meta name="description" content="Technobabble and nonsense">
+
+    <link rel="stylesheet" href="https://h3.gd/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://h3.gd/atom.xml">
+    
+
+    
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to content</a>
+    <div class="container">
+        <header> 
+            <h1 class="site-header">
+                <a href="https:&#x2F;&#x2F;h3.gd">h3r2tic&#x27;s grimoire</a>
+            </h1>
+            <nav>
+                <a href="https://github.com/h3r2tic/"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/h3r2tic/"><i class="fa fa-twitter"></i></a>
+
+                
+                
+                
+                <a  href="https:&#x2F;&#x2F;h3.gd&#x2F;about&#x2F;">About</a>
+                
+                
+            </nav>
+        </header>
+        <main id="main" tabindex="-1">
+            
+
+<article class="post">
+    <header>
+        <h1>Compile-time raytracing</h1>
+    </header>
+    <div class="content">
+        <p>A compile-time raytracer written in the D Programming Language.</p>
+<span id="continue-reading"></span>
+<p><em>NOTE: This is old, circa 2006. ctrace was written with a pre-1.0 verison of the D language, and to my knowledge, was the world's first compile-time ray-tracer. See <a href="https://github.com/phresnel/metatrace">metatrace</a> (not my own) for the first one written in C++!</em></p>
+<h1 id="why">Why ?</h1>
+<p>Why would anyone create anything like this ? The rendering times are terrible, code is harder to write... but I think it's a nice demonstration of metaprogramming in D.
+Ok, ok, I'm just a pervert and I love abusing the D compiler.</p>
+<h1 id="how">How ?</h1>
+<p>Anyway, how does it work ? The compiler doesn't produce an executable but spits out BGR pixel data instead. The whole idea is to compute the image using compile-time constructs only - lots of templates. Then the data is printed using 'pragma (msg, theData)'. There's one problem though - the memory requirements for generating even the simplest image are so high that it'd be impossible to create anything meaningful. The compiler doesn't just 'run' templates - it saves their symbols somewhere and looks them up when doing subsequent instantiations. This is why I'm using a program that runs the compile-time raytracing for short spans of pixels. It then reads the data the compiler prints and generates the final image by concatenating the output of several compilations.</p>
+<p>You can <a href="https://h3.gd/ctrace/ctrace.zip">download ctrace</a> and give it a try. Just run 'rdmd ctrun.d'. The resolution is defined in ctrun.d, scene description sits in ctrace.d.</p>
+<p>Note: ctrace was developed when D didn't have Compile Time Function Evaluation and uses only the functional sub-language of template metaprogramming. Using CTFE, ctrace could be made hundreds of times faster and look like normal runtime code. But then it wouldn't be fun anymore.</p>
+<hr />
+<p>Here are some generated images which I saved during the development of ctrace:</p>
+<p><img src="https://h3.gd/ctrace/first%20attempts.png" alt="" /></p>
+<p>One of the very first attempts of compile-time raytracing</p>
+<p><img src="https://h3.gd/ctrace/first%20bugs.png" alt="" /></p>
+<p>I added support for colored materials, but it turned out that my ray-sphere intersection code was producing incorrect surface normals. The image above was supposed to have one directional light aimed at [0, 0, -1]</p>
+<p><img src="https://h3.gd/ctrace/bugs%20fixed.png" alt="" /></p>
+<p>Slightly different scene with one main white light and a red backlight. Sphere intersection bugs fixed.</p>
+<p><img src="https://h3.gd/ctrace/reflections.png" alt="" /></p>
+<p>Now with a ground plane and reflections</p>
+<p><img src="https://h3.gd/ctrace/better%20lighting.png" alt="" /></p>
+<p>features += boxes | shadows | pointLights; 
+the raytracing wasn't fully recursive at that point, so reflections are a bit bogus</p>
+<p><img src="https://h3.gd/ctrace/recursion.png" alt="" /></p>
+<p>Now with fully-recursive raytracing with depth set to 3</p>
+<p><img src="https://h3.gd/ctrace/triangles.png" alt="" /></p>
+<p>Added triangle support and traced a D logo. Somehow there are some incorrect pixels</p>
+<p>h2. And now, for the real thing...</p>
+<p><img src="https://h3.gd/ctrace/big%20one.png" alt="" /></p>
+<p>Total rendering/compilation time: 26148 seconds (on my 1.7GHz laptop)</p>
+<pre data-lang="d" style="background-color:#151515;color:#e8e8d3;" class="language-d "><code class="language-d" data-lang="d"><span style="color:#8fbfdc;">alias </span><span style="color:#ffb964;">Tuple</span><span>!(
+</span><span>	</span><span style="color:#ffb964;">Sphere</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(-</span><span style="color:#cf6a4c;">4</span><span>.</span><span style="color:#ffb964;">f</span><span>, </span><span style="color:#cf6a4c;">1.5</span><span style="color:#8fbfdc;">f</span><span>, -</span><span style="color:#cf6a4c;">8</span><span>.</span><span style="color:#ffb964;">f</span><span>),	</span><span style="color:#cf6a4c;">3.2</span><span style="color:#8fbfdc;">f</span><span>,  </span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">1</span><span>.</span><span style="color:#ffb964;">f</span><span>, </span><span style="color:#cf6a4c;">.3</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.1</span><span style="color:#8fbfdc;">f</span><span>)),
+</span><span>	</span><span style="color:#ffb964;">Sphere</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">2.5</span><span style="color:#8fbfdc;">f</span><span>,  </span><span style="color:#cf6a4c;">1.5</span><span style="color:#8fbfdc;">f</span><span>, -</span><span style="color:#cf6a4c;">5.0</span><span style="color:#8fbfdc;">f</span><span>),	</span><span style="color:#cf6a4c;">1.2</span><span style="color:#8fbfdc;">f</span><span>,  </span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">.2</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">1</span><span>.</span><span style="color:#ffb964;">f</span><span>, </span><span style="color:#cf6a4c;">.4</span><span style="color:#8fbfdc;">f</span><span>)),
+</span><span>	</span><span style="color:#ffb964;">Sphere</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!( </span><span style="color:#cf6a4c;">.7</span><span style="color:#8fbfdc;">f</span><span>, -</span><span style="color:#cf6a4c;">1.5</span><span style="color:#8fbfdc;">f</span><span>, -</span><span style="color:#cf6a4c;">4.2</span><span style="color:#8fbfdc;">f</span><span>),	</span><span style="color:#cf6a4c;">1.5</span><span style="color:#8fbfdc;">f</span><span>,  </span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">.2</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.4</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">1</span><span>.</span><span style="color:#ffb964;">f</span><span>)),
+</span><span>	</span><span style="color:#ffb964;">Plane</span><span>! (</span><span style="color:#ffb964;">Vec3</span><span>!( </span><span style="color:#cf6a4c;">0</span><span>.</span><span style="color:#ffb964;">f</span><span>,  </span><span style="color:#cf6a4c;">1</span><span>.</span><span style="color:#ffb964;">f</span><span>,   </span><span style="color:#cf6a4c;">0</span><span>.</span><span style="color:#ffb964;">f</span><span>),	</span><span style="color:#cf6a4c;">4</span><span>.</span><span style="color:#ffb964;">f</span><span>,   </span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">.5</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.5</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.5</span><span style="color:#8fbfdc;">f</span><span>))
+</span><span>) </span><span style="color:#ffb964;">scene</span><span>;
+</span><span>
+</span><span>
+</span><span style="color:#8fbfdc;">alias </span><span style="color:#ffb964;">Tuple</span><span>!(
+</span><span>	</span><span style="color:#ffb964;">PointLight</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">8</span><span>.</span><span style="color:#ffb964;">f</span><span>, </span><span style="color:#cf6a4c;">8</span><span>.</span><span style="color:#ffb964;">f</span><span>, </span><span style="color:#cf6a4c;">10</span><span>.</span><span style="color:#ffb964;">f</span><span>),   </span><span style="color:#ffb964;">scale</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">0.7</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">0.7</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">0.6</span><span style="color:#8fbfdc;">f</span><span>), </span><span style="color:#cf6a4c;">30</span><span>.</span><span style="color:#ffb964;">f</span><span>)),
+</span><span>	</span><span style="color:#ffb964;">PointLight</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(-</span><span style="color:#cf6a4c;">2</span><span>.</span><span style="color:#ffb964;">f</span><span>,  </span><span style="color:#cf6a4c;">2.5</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">0</span><span>.</span><span style="color:#ffb964;">f</span><span>), </span><span style="color:#ffb964;">scale</span><span>!(</span><span style="color:#ffb964;">Vec3</span><span>!(</span><span style="color:#cf6a4c;">.6</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.4</span><span style="color:#8fbfdc;">f</span><span>, </span><span style="color:#cf6a4c;">.1</span><span style="color:#8fbfdc;">f</span><span>), </span><span style="color:#cf6a4c;">8</span><span>.</span><span style="color:#ffb964;">f</span><span>))
+</span><span>) </span><span style="color:#ffb964;">lights</span><span>;
+</span></code></pre>
+
+    </div>
+
+    
+    <div class="article-info">
+        
+        <div class="article-date"> 1 January 2006</div>
+        
+        <div class="article-taxonomies">
+            
+            
+        </div>
+    </div>
+
+</article>
+
+
+        </main>
+        <footer>
+            <p>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Tomasz Stachowiak</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />
+                Powered by <a target="_blank" href="https://getzola.org/">Zola</a>, Theme based on <a target="_blank" href="https://github.com/zbrox/anpu-zola-theme">Anpu</a>.
+            </p>
+            <p>
+                
+                
+            </p>
+        </footer>
+    </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+              // customised options
+              // • auto-render specific keys, e.g.:
+              delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false},
+                  {left: '\\(', right: '\\)', display: false},
+                  {left: '\\[', right: '\\]', display: true}
+              ],
+              // • rendering keys, e.g.:
+              throwOnError : false
+            });
+        });
+    </script>
+
+</body>
+</html>

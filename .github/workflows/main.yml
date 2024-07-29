@@ -10,7 +10,7 @@ jobs:
         with:
           ref: master
       - name: Configure Git to treat the directory as safe
-        run: git config --global --add safe.directory /github/workspace
+        run: git config --system --add safe.directory /github/workspace
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.14.1
         env:
